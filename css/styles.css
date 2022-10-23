@@ -5,6 +5,8 @@
   --lgray: #757575;
   --blue: #2196f3;
   --gray-background: #f5f4fa;
+  --social-link-color: #afb1b8;
+  --footer-icon-circle: rgba(255, 255, 255, 0.1);
 }
 *,
 *::before,
@@ -28,6 +30,7 @@ body {
   font-family: "roboto", sans-serif;
   font-style: normal;
   max-width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 0;
 }
@@ -66,6 +69,9 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+.section {
+  max-width: 1600px;
+}
 .menu-container {
   display: flex;
   max-width: 1200px;
@@ -99,7 +105,10 @@ body {
   font-size: 14px;
   line-height: 1.17em;
   letter-spacing: 0.02em;
-  margin-left: 50px;
+  margin-left: 30px;
+}
+.list .icon:nth-child(1) {
+  margin-right: 10px;
 }
 .logo-footer-margin {
   margin-bottom: 20px;
@@ -134,7 +143,10 @@ body {
 }
 .index-main-background {
   display: flex;
+  max-width: 1600px;
   background-color: var(--gray);
+  background-image: url(../images/index-background-image.jpg);
+  background-size: cover;
   flex-direction: column;
   padding: 200px 0;
 }
@@ -229,6 +241,7 @@ body {
   display: flex;
   padding: 30px 0;
   justify-content: center;
+  flex-direction: column;
 }
 .footer {
   background-color: var(--gray);
@@ -294,6 +307,11 @@ body {
   border: 1px solid #eee;
   flex-basis: calc((100% - 60px) / 3);
 }
+.portfolio-box:hover,
+.portfolio-box:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-projects {
   display: flex;
   flex-wrap: wrap;
@@ -302,4 +320,53 @@ body {
 }
 .portfolio-project {
   width: 100%;
+}
+.icon {
+  --color1: currentColor;
+}
+.social-links {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.social-link {
+  --color2: var(--social-link-color);
+}
+.social-link:hover,
+.social-link:focus,
+.footer-social-link:hover,
+.footer-social-link:focus {
+  --color2: var(--white);
+  background-color: var(--blue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.index-cliens-container {
+  background-color: var(--white);
+}
+.lorem-icon {
+  background-color: var(--gray-background);
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.footer-social-link {
+  --color2: var(--white);
+  background-color: var(--footer-icon-circle);
+  border-radius: 50%;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+.footer-social {
+  max-width: 206px;
+  margin-top: 72px;
+  margin-left: 70px;
+}
+.client {
+  border: 1px solid var(--social-link-color);
 }
