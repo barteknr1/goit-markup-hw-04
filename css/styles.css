@@ -112,6 +112,8 @@ body {
   line-height: 1.17em;
   letter-spacing: 0.02em;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
 }
 .list .icon:nth-child(1) {
   margin-right: 10px;
@@ -394,6 +396,7 @@ body {
   border-radius: 4px;
   gap: 30px;
 }
+
 .client:hover,
 .client:focus {
   border: 1px solid var(--blue);
@@ -402,9 +405,6 @@ body {
 .index-client-link:focus {
   --color2: var(--blue);
   cursor: pointer;
-}
-.index-client-link {
-  text-decoration: none;
 }
 .clients {
   display: flex;
